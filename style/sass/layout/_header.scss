@@ -1,0 +1,50 @@
+@use '../abstract/mixins';
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo img{
+  display: block;
+}
+
+.header {
+  padding: 45px 0;
+}
+
+.hamburger {
+  display: none;
+
+  img {
+    display: block;
+  }
+}
+
+@include mixins.media(768px) {
+  .header {
+    padding: 40px 0 55px;
+  }
+}
+
+@include mixins.media(575px) {
+  .main-nav {
+    display: none;
+  }
+  
+  .hamburger {
+    display: inline-block;
+  }
+
+  .header__logo img {
+    width: 163px;
+    height: auto;
+  }
+
+  .header {
+    padding: 33px 0 40px;
+  }
+}
+
+

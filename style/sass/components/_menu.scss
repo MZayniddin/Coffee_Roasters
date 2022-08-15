@@ -1,0 +1,25 @@
+@use '../abstract/mixins';
+@use '../abstract/variables';
+
+nav,
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu__item:not(:last-child) {
+  margin-right: 33px;
+}
+
+.nav-menu__link {
+  font-weight: 700;
+  font-size: variables.$menu-font-size;
+  line-height: 15px;
+  letter-spacing: 0.923077px;
+  text-transform: uppercase;
+  color: variables.$menu-text-color;
+  &:hover {
+    color: variables.$secondary-text-color;
+  }
+}
+

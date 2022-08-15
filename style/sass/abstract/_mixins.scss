@@ -1,0 +1,19 @@
+@use './variables';
+
+@mixin media($media-size) {
+  @media screen and (max-width: $media-size){
+    @content;
+  }
+}
+
+
+@mixin btn-create {
+  font-family: variables.$secondary-font;
+  font-size: 18px;
+  color: variables.$primary-text-color;
+  background-color: variables.$secondary-bg-color;
+  padding: 15px 31px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
