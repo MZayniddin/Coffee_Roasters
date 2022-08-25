@@ -75,7 +75,7 @@
       line-height: 32px;
       margin-bottom: 24px;
     }
-    
+
     &-copy {
       line-height: 26px;
     }
@@ -225,7 +225,7 @@
     content: '';
     position: absolute;
     height: 2px;
-    width: 100%; 
+    width: 100%;
     background-color: variables.$extra-color;
     top: -180px;
     left: 0;
@@ -234,19 +234,16 @@
   &__part:last-child::before {
     display: none;
   }
-} 
+}
 
-
-@include mixins.media(1243px){
+@include mixins.media(1243px) {
   .process {
     padding-top: 650px;
   }
 }
 
-
 @include mixins.media(905px) {
   .services {
-
     &__cards {
       left: 50px;
       right: 50px;
@@ -367,7 +364,7 @@
       width: 55px;
       height: 56px;
     }
-    
+
   }
 
   .process {
@@ -381,31 +378,31 @@
 
     &__part {
       max-width: 233px;
-  
+
       &-title {
         font-size: 28px;
         line-height: 32px;
         margin-bottom: 38px;
       }
-  
+
       &-copy {
         line-height: 25px;
         font-size: 15px;
       }
     }
-  
+
     &__part:not(:last-child) {
       padding-right: 10px;
     }
-  
+
     &__part-title::before {
       top: -90px;
     }
-  
+
     &__part::after {
       top: -179px;
     }
-  
+
     &__part::before {
       top: -165px;
     }
@@ -484,8 +481,8 @@
     padding: 717px 0 120px 0;
     text-align: center;
 
-    &__part:first-child{
-      .process__part-title{
+    &__part:first-child {
+      .process__part-title {
         padding-right: 0;
       }
     }
@@ -505,26 +502,26 @@
 
     &__part {
       max-width: fit-content;
-  
+
       &-title {
         margin-bottom: 24px;
       }
     }
-  
+
     &__part:not(:last-child) {
       padding-right: 0;
     }
-  
+
     &__part-title::before {
       top: -75px;
       left: 50%;
       transform: translateX(-50%);
     }
-  
+
     &__part::after {
       display: none;
     }
-  
+
     &__part::before {
       display: none;
     }
