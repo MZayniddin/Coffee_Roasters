@@ -2,4 +2,5 @@
 @use 'base/typography';
 @use 'components/menu';
 @use 'layout';
-@use 'page';
+@use 'page/home';
+@use 'page/about';
