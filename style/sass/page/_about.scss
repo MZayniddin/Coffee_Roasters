@@ -1,0 +1,148 @@
+@use '../abstract/mixins';
+@use '../abstract/variables';
+
+.hero {
+  border-radius: 10px;
+  padding: 145px 0 140px 86px;
+  background-image: url('../../../images/about_banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__title {
+    font-family: variables.$secondary-font;
+    font-size: 40px;
+    line-height: 48px;
+    color: variables.$primary-text-color;
+    margin-bottom: 24px;
+  }
+
+  &__copy {
+    line-height: 26px;
+    color: variables.$primary-text-color;
+    max-width: 445px;
+  }
+}
+
+.commitment {
+  display: flex;
+  align-items: center;
+  padding: 168px 85px 256px;
+
+  &__image {
+    margin-right: 125px;
+  }
+
+  &__title {
+    font-family: variables.$secondary-font;
+    font-size: 40px;
+    line-height: 48px;
+    color: variables.$secondary-text-color;
+    margin-bottom: 32px;
+  }
+
+  &__copy {
+    line-height: 26px;
+    color: variables.$secondary-text-color;
+    opacity: 0.8;
+    mix-blend-mode: normal;
+    max-width: 540px;
+  }
+}
+
+.quality {
+  background-color: variables.$primary-bg-color;
+  padding: 88px 20px 176px 85px;
+
+  &__title {
+    font-family: variables.$secondary-font;
+    font-size: 40px;
+    line-height: 48px;
+    color: variables.$primary-text-color;
+    margin-bottom: 32px;
+  }
+
+  &__copy {
+    max-width: 540px;
+    line-height: 26px;
+    color: variables.$primary-text-color;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+  }
+}
+
+@include mixins.media(1050px){
+  .commitment {
+    padding: 144px 0px;
+
+    &__image {
+      margin-right: 69px;
+
+      img {
+        width: 281px;
+        height: 470px;
+      }
+    }
+  }
+}
+
+@include mixins.media(768px) {
+  .hero {
+    padding: 118px 20px 118px 58px;
+
+    &__title {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &__copy {
+      font-size: 15px;
+      line-height: 25px;
+      opacity: 0.8;
+    }
+  }
+
+  .commitment {
+    padding-bottom: 304px;
+    &__title {
+      font-size: 32px;
+      line-height: 48px;
+      margin-bottom: 30px;
+    }
+
+    &__copy {
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+}
+
+@include mixins.media(630px) {
+  .commitment {
+    flex-direction: column;
+    padding: 120px 0 198px;
+    text-align: center;
+
+    &__image {
+      margin: 0 0 48px 0;
+      img {
+        width: 100%;
+        height: 400px;
+      }
+    }
+  }
+}
+
+@include mixins.media(480px) {
+  .hero {
+    padding: 111px 24px 87px;
+    background-image: url("../../../images/about_banner_sm.jpg");
+    background-position: right;
+    text-align: center;
+
+    &__title {
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+}
