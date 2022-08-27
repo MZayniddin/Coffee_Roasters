@@ -53,6 +53,8 @@
 .quality {
   background-color: variables.$primary-bg-color;
   padding: 88px 20px 176px 85px;
+  position: relative;
+  border-radius: 10px;
 
   &__title {
     font-family: variables.$secondary-font;
@@ -69,11 +71,109 @@
     mix-blend-mode: normal;
     opacity: 0.8;
   }
+
+  &::after {
+    content: url('../../../images/coffee_cup.jpg');
+    position: absolute;
+    bottom: 88px;
+    right: 85px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}
+
+.headquarter {
+  padding: 168px 85px;
+
+  &__title {
+    font-family: variables.$secondary-font;
+    font-size: 24px;
+    line-height: 32px;
+    color: variables.$menu-text-color;
+    margin-bottom: 167px;
+  }
+
+  &__list {
+    display: flex;
+
+    &-item {
+      max-width: 380px;
+      position: relative;
+      white-space: nowrap;
+      flex: 1;
+    }
+
+    &-item:not(:last-child){
+      padding-right: 95px;
+    }
+ 
+    &-item::after {
+      position: absolute;
+      top: -98px;
+      left: 0;
+    }
+
+    &-item:first-child::after {
+      content: url('../../../images/kingdoom.svg');
+    }
+
+    &-item:nth-child(2)::after {
+      content: url('../../../images/canada.svg');
+    }
+
+    &-item:last-child::after {
+      content: url('../../../images/australia.svg');
+    }
+  }
+
+  &__list-item__title {
+    font-family: variables.$secondary-font;
+    font-size: 32px;
+    line-height: 36px;
+    color: variables.$secondary-text-color;
+    margin-bottom: 24px;
+  }
+
+  .address,
+  .tel-link {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: variables.$secondary-text-color;
+  }
+
+
+}
+
+@include mixins.media(1243px) {
+  .quality {
+    padding: 224px 34px 67px;
+    text-align: center;
+
+    &__copy {
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    &::after {
+      content: '';
+      max-width: 100%;
+      height: 320px;
+      background-image: url('../../../images/coffee_cup.jpg');
+      background-position: 100% 80%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: translateY(-50%);
+      top: 0;
+      left: 57px;
+      right: 57px;
+    }
+  }
 }
 
 @include mixins.media(1050px){
   .commitment {
-    padding: 144px 0px;
+    padding: 144px 0px 230px 0px;
 
     &__image {
       margin-right: 69px;
@@ -82,6 +182,23 @@
         width: 281px;
         height: 470px;
       }
+    }
+  }
+}
+
+@include mixins.media(905px) {
+  .headquarter {
+    padding: 144px 0px;
+
+    &__list-item {
+      &__title {
+        font-size: 24px;
+        margin-bottom: 21px;
+      }
+    }
+
+    &__list-item:not(:last-child){
+      padding-right: 10px;
     }
   }
 }
@@ -115,6 +232,19 @@
       line-height: 25px;
     }
   }
+
+  .quality {
+    &__title {
+      font-size: 32px;
+      line-height: 48px;
+      margin-bottom: 24px;
+    }
+
+    &__copy {
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
 }
 
 @include mixins.media(630px) {
@@ -129,6 +259,48 @@
         width: 100%;
         height: 400px;
       }
+    }
+  }
+}
+
+@include mixins.media(575px) {
+  .quality {
+    padding: 142px 24px 61px;
+
+    &__title {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    &::after {
+      height: 156px;
+      right: 24px;
+      left: 24px;
+    }
+  }
+
+  .headquarter {
+    padding: 120px 0px;
+    text-align: center;
+
+    &__list {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__list-item__title {
+      font-size: 28px;
+      margin-bottom: 22px;
+    }
+
+    &__list-item:not(:last-child) {
+      padding-right: 0;
+      margin-bottom: 177px;
+    }
+
+    &__list-item::after {
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }
