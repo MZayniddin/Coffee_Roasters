@@ -1,0 +1,96 @@
+@use '../abstract/mixins';
+@use '../abstract/variables';
+
+.plan__hero {
+  padding: 134px 0 134px 86px;
+  border-radius: 10px;
+  margin-bottom: 168px;
+  background-image: url('../../../images/plan_banner.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-title {
+    font-family: variables.$secondary-font;
+    color: variables.$primary-text-color;
+    font-size: 72px;
+    margin-bottom: 32px;
+  }
+
+  &-copy {
+    max-width: 445px;
+    font-size: 16px;
+    line-height: 26px;
+    color: variables.$primary-text-color;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+  }
+}
+
+.process-plan {
+  background-color: variables.$primary-bg-color;
+  padding: 308px 20px 100px 85px;
+
+  .process__part {
+    &-title {
+      color: variables.$primary-text-color;
+    }
+
+    &-copy {
+      color: variables.$primary-text-color;
+    }
+
+    &::after {
+      background-color: transparent;
+    }
+
+    &::before {
+      max-width: 380px;
+      left: 15px;
+    }
+  }
+}
+
+@include mixins.media(768px) {
+  .plan__hero {
+    padding: 127px 30px 126px 58px;
+    background-position: right 72% bottom 45%;
+    margin-bottom: 144px;
+
+    &-title {
+      font-size: 48px;
+      margin-bottom: 24px;
+    }
+
+    &-copy {
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+
+  .process-plan {
+    padding: 290px 40px 97px;
+  }
+}
+
+@include mixins.media(575px) {
+  .process-plan {
+    padding: 176px 24px 79px;
+  }
+}
+
+@include mixins.media(480px) {
+  .plan__hero {
+    background-image: url('../../../images/plan_banner_sm.jpg');
+    background-position: center;
+    padding: 101px 24px 136px;
+    text-align: center;
+    margin-bottom: 120px;
+    
+    &-title {
+      font-size: 40px;
+      line-height: 40px;
+      margin-bottom: 22px;
+    }
+  }
+}
