@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
   <title>Creat your plan</title>
   <link rel="stylesheet" href="../style/css/main.min.css">
 </head>
+
 <body>
   <!-- Header section -->
   <header class="header">
@@ -45,21 +47,23 @@
 
   <!-- Main section -->
   <main class="plan">
+    <!-- Hero section -->
     <div class="container">
-
-      <!-- Hero section -->
       <section class="plan__hero">
-        <h1 class="plan__hero-title">
+        <h2 class="plan__hero-title">
           Create a plan
-        </h1>
+        </h2>
         <p class="plan__hero-copy">
-          Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.
+          Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from
+          around the globe delivered fresh to your door.
         </p>
       </section>
-      <!-- /Hero section -->
+    </div>
+    <!-- /Hero section -->
 
-      <!-- Process section -->
-      <section class="process-plan process">
+    <!-- Process section -->
+    <section class="process-plan process">
+        <div class="container">
         <ol class="process__parts">
           <li class="process__part">
             <h3 class="process__part-title">
@@ -67,7 +71,8 @@
             </h3>
 
             <p class="process__part-copy">
-              Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.
+              Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices
+              for them. There are new coffees in all profiles every month for you to try out.
             </p>
           </li>
           <li class="process__part">
@@ -76,7 +81,8 @@
             </h3>
 
             <p class="process__part-copy">
-              Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.
+              Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your
+              subscription with no commitment through our online portal.
             </p>
           </li>
           <li class="process__part">
@@ -85,15 +91,291 @@
             </h3>
 
             <p class="process__part-copy">
-              We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.
+              We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class
+              coffees
+              curated to provide a distinct tasting experience.
             </p>
           </li>
         </ol>
+      </div>
       </section>
-      <!-- /Process section -->
+    <!-- /Process section -->
 
+    <!-- Order coffee -->
+    <div class="container">
+      <section class="order">
+        <ol class="order__links">
+          <li class="order__links-item">
+            <a class="order__link" href="#drink">Preferences</a>
+          </li>
+          <li class="order__links-item">
+            <a class="order__link" href="#what-type">Bean Type</a>
+          </li>
+          <li class="order__links-item">
+            <a class="order__link" href="#how-much">Quantity</a>
+          </li>
+          <li class="order__links-item">
+            <a class="order__link" href="#grind">Grind Option</a>
+          </li>
+          <li class="order__links-item">
+            <a class="order__link" href="#deliveries">Deliveries</a>
+          </li>
+        </ol>
+
+        <form class="order__option" action="https://echo.htmlacademy.ru" method="POST">
+          <div class="order__option-wrapper">
+            <h3 id="drink" class="order__option-title">How do you drink your coffee?</h3>
+            <div class="order__option-choose">
+              <label for="capsule">
+                <input type="radio" id="capsule" name="drink">
+                <div class="option__val">
+                  <strong class="option__val-title">Capsule</strong>
+                  <p class="option__val-copy">
+                    Compatible with Nespresso systems and similar brewers
+                  </p>
+                </div>
+              </label>
+
+              <label for="filter">
+                <input type="radio" id="filter" name="drink">
+                <div class="option__val">
+                  <strong class="option__val-title">Filter</strong>
+                  <p class="option__val-copy">
+                    For pour over or drip methods like Aeropress, Chemex, and V60
+                  </p>
+                </div>
+              </label>
+
+              <label for="espresso">
+                <input type="radio" id="espresso" name="drink">
+                <div class="option__val">
+                  <strong class="option__val-title">Espresso</strong>
+                  <p class="option__val-copy">
+                    Dense and finely ground beans for an intense, flavorful experience
+                  </p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="order__option-wrapper">
+            <h3 id="what-type" class="order__option-title">What type of coffee?</h3>
+            <div class="order__option-choose">
+              <label for="single">
+                <input type="radio" id="single" name="type">
+                <div class="option__val">
+                  <strong class="option__val-title">Single Origin</strong>
+                  <p class="option__val-copy">
+                    Distinct, high quality coffee from a specific family-owned farm
+                  </p>
+                </div>
+              </label>
+
+              <label for="decaf">
+                <input type="radio" id="decaf" name="type">
+                <div class="option__val">
+                  <strong class="option__val-title">Decaf</strong>
+                  <p class="option__val-copy">
+                    Just like regular coffee, except the caffeine has been removed
+                  </p>
+                </div>
+              </label>
+
+              <label for="blended">
+                <input type="radio" id="blended" name="type">
+                <div class="option__val">
+                  <strong class="option__val-title">Blended</strong>
+                  <p class="option__val-copy">
+                    Combination of two or three dark roasted beans of organic coffees
+                  </p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="order__option-wrapper">
+            <h3 id="how-much" class="order__option-title">How much would you like?</h3>
+            <div class="order__option-choose">
+              <label for="250g">
+                <input type="radio" id="250g" name="quantity">
+                <div class="option__val">
+                  <strong class="option__val-title">250g</strong>
+                  <p class="option__val-copy">
+                    Perfect for the solo drinker. Yields about 12 delicious cups.
+                  </p>
+                </div>
+              </label>
+
+              <label for="500g">
+                <input type="radio" id="500g" name="quantity">
+                <div class="option__val">
+                  <strong class="option__val-title">500g</strong>
+                  <p class="option__val-copy">
+                    Perfect option for a couple. Yields about 40 delectable cups.
+                  </p>
+                </div>
+              </label>
+
+              <label for="1000g">
+                <input type="radio" id="1000g" name="quantity">
+                <div class="option__val">
+                  <strong class="option__val-title">1000g</strong>
+                  <p class="option__val-copy">
+                    Perfect for offices and events. Yields about 90 delightful cups.
+                  </p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="order__option-wrapper">
+            <h3 id="grind" class="order__option-title">Want us to grind them?</h3>
+            <div class="order__option-choose">
+              <label for="wholebean">
+                <input type="radio" id="wholebean" name="grind">
+                <div class="option__val">
+                  <strong class="option__val-title">Wholebean</strong>
+                  <p class="option__val-copy">
+                    Best choice if you cherish the full sensory experience
+                  </p>
+                </div>
+              </label>
+
+              <label for="grind-filter">
+                <input type="radio" id="grind-filter" name="grind">
+                <div class="option__val">
+                  <strong class="option__val-title">Filter</strong>
+                  <p class="option__val-copy">
+                    For drip or pour-over coffee methods such as V60 or Aeropress
+                  </p>
+                </div>
+              </label>
+
+              <label for="cafetiére">
+                <input type="radio" id="cafetiére" name="grind">
+                <div class="option__val">
+                  <strong class="option__val-title">Cafetiére</strong>
+                  <p class="option__val-copy">
+                    Course ground beans specially suited for french press coffee
+                  </p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="order__option-wrapper">
+            <h3 id="deliveries" class="order__option-title">How often should we deliver?</h3>
+            <div class="order__option-choose">
+              <label for="every_week">
+                <input type="radio" id="every_week" name="deliver">
+                <div class="option__val">
+                  <strong class="option__val-title">Every week</strong>
+                  <p class="option__val-copy">
+                    $7.20 per shipment. Includes free first-class shipping.
+                  </p>
+                </div>
+              </label>
+
+              <label for="every_2_weeks">
+                <input type="radio" id="every_2_weeks" name="deliver">
+                <div class="option__val">
+                  <strong class="option__val-title">Every 2 weeks</strong>
+                  <p class="option__val-copy">
+                    $9.60 per shipment. Includes free priority shipping.
+                  </p>
+                </div>
+              </label>
+
+              <label for="every_month">
+                <input type="radio" id="every_month" name="deliver">
+                <div class="option__val">
+                  <strong class="option__val-title">Every month</strong>
+                  <p class="option__val-copy">
+                    $12.00 per shipment. Includes free priority shipping.
+                  </p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="summary">
+            <p class="summary-subtitle">Order Summary</p>
+            <p class="summary-order">
+              “I drink my coffee as <span>Filter</span>, with a <span>Decaf</span> type of bean. <span>250g</span>
+              ground
+              ala <span>Cafetiare</span>, sent to me <span>Every Week</span>.”
+            </p>
+          </div>
+
+          <button type="submit" class="link-create btn-plan">
+            Create my plan!
+          </button>
+        </form>
+      </section>
     </div>
+    <!-- /Order coffee -->
   </main>
   <!-- /Main section -->
+
+  <!-- Footer section -->
+  <div class="container">
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="../images/footer_logo.svg" alt="Logo">
+      </div>
+
+      <nav class="footer-nav">
+        <ul class="nav-menu">
+          <li class="nav-menu__item">
+            <a href="index.html" class="nav-menu__link">
+              Home
+            </a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="about.html" class="nav-menu__link">
+              About us
+            </a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="plan.html" class="nav-menu__link">
+              Create your plan
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li class="social-item">
+          <a href="https://facebook.com">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.7753 0H1.42534C0.693342 0 0.100342 0.593 0.100342 1.325V22.676C0.100342 23.407 0.693342 24 1.42534 24H12.9203V14.706H9.79234V11.084H12.9203V8.413C12.9203 5.313 14.8133 3.625 17.5793 3.625C18.9043 3.625 20.0423 3.724 20.3743 3.768V7.008L18.4563 7.009C16.9523 7.009 16.6613 7.724 16.6613 8.772V11.085H20.2483L19.7813 14.707H16.6613V24H22.7773C23.5073 24 24.1003 23.407 24.1003 22.675V1.325C24.1003 0.593 23.5073 0 22.7753 0Z"
+                fill="#FEFCF7" />
+            </svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="https://twitter.com">
+            <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24 2.55705C23.117 2.94905 22.168 3.21305 21.172 3.33205C22.189 2.72305 22.97 1.75805 23.337 0.608047C22.386 1.17205 21.332 1.58205 20.21 1.80305C19.313 0.846047 18.032 0.248047 16.616 0.248047C13.437 0.248047 11.101 3.21405 11.819 6.29305C7.728 6.08805 4.1 4.12805 1.671 1.14905C0.381 3.36205 1.002 6.25705 3.194 7.72305C2.388 7.69705 1.628 7.47605 0.965 7.10705C0.911 9.38805 2.546 11.522 4.914 11.997C4.221 12.185 3.462 12.229 2.69 12.081C3.316 14.037 5.134 15.46 7.29 15.5C5.22 17.123 2.612 17.848 0 17.54C2.179 18.937 4.768 19.752 7.548 19.752C16.69 19.752 21.855 12.031 21.543 5.10605C22.505 4.41105 23.34 3.54405 24 2.55705Z"
+                fill="#FEFCF7" />
+            </svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="https://instagram.com">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 0C8.741 0 8.333 0.014 7.053 0.072C2.695 0.272 0.273 2.69 0.073 7.052C0.014 8.333 0 8.741 0 12C0 15.259 0.014 15.668 0.072 16.948C0.272 21.306 2.69 23.728 7.052 23.928C8.333 23.986 8.741 24 12 24C15.259 24 15.668 23.986 16.948 23.928C21.302 23.728 23.73 21.31 23.927 16.948C23.986 15.668 24 15.259 24 12C24 8.741 23.986 8.333 23.928 7.053C23.732 2.699 21.311 0.273 16.949 0.073C15.668 0.014 15.259 0 12 0ZM12 2.163C15.204 2.163 15.584 2.175 16.85 2.233C20.102 2.381 21.621 3.924 21.769 7.152C21.827 8.417 21.838 8.797 21.838 12.001C21.838 15.206 21.826 15.585 21.769 16.85C21.62 20.075 20.105 21.621 16.85 21.769C15.584 21.827 15.206 21.839 12 21.839C8.796 21.839 8.416 21.827 7.151 21.769C3.891 21.62 2.38 20.07 2.232 16.849C2.174 15.584 2.162 15.205 2.162 12C2.162 8.796 2.175 8.417 2.232 7.151C2.381 3.924 3.896 2.38 7.151 2.232C8.417 2.175 8.796 2.163 12 2.163ZM5.838 12C5.838 8.597 8.597 5.838 12 5.838C15.403 5.838 18.162 8.597 18.162 12C18.162 15.404 15.403 18.163 12 18.163C8.597 18.163 5.838 15.403 5.838 12ZM12 16C9.791 16 8 14.21 8 12C8 9.791 9.791 8 12 8C14.209 8 16 9.791 16 12C16 14.21 14.209 16 12 16ZM16.965 5.595C16.965 4.8 17.61 4.155 18.406 4.155C19.201 4.155 19.845 4.8 19.845 5.595C19.845 6.39 19.201 7.035 18.406 7.035C17.61 7.035 16.965 6.39 16.965 5.595Z"
+                fill="#FEFCF7" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+  <!-- /Footer setion -->
 </body>
+
 </html>
