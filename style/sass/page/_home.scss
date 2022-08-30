@@ -44,20 +44,18 @@
   flex-wrap: wrap;
 
   &__title {
+    font-family: variables.$secondary-font;
     position: absolute;
-    // top: 21%;
-    // left: 105px;
-    // font-family: variables.$secondary-font;
-    // font-size: 150px;
-    // line-height: 1;
-    // white-space: nowrap;
-    // background: linear-gradient(180deg, rgba(254, 252, 247, 0.0001) 0%, #FEFCF7 100%);
-    // background-color: variables.$menu-text-color;
-    // color: transparent;
-    // -webkit-background-clip: text;
-    // overflow: hidden;
-    // text-overflow: ellipsis;
-    // text-emphasis-position: center;
+    top: 185px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 150px;
+    line-height: 1;
+    white-space: nowrap;
+    background: linear-gradient(180deg, rgba(254, 252, 247, 0.0001) 0%, #FEFCF7 100%);
+    background-color: variables.$menu-text-color;
+    color: transparent;
+    -webkit-background-clip: text;
   }
 
   &__card {
@@ -187,6 +185,12 @@
   }
 }
 
+@include mixins.media(1050px) {
+  .product__title {
+    font-size: 108px;
+  }
+}
+
 @include mixins.media(905px) {
   .services {
     &__cards {
@@ -252,6 +256,11 @@
   .product {
     padding: 203px 38px 144px;
     flex-direction: column;
+
+    &__title {
+      font-size: 90px;
+      top: 160px
+    }
 
     &__card {
       width: fit-content;
@@ -323,10 +332,21 @@
   }
 }
 
+@include mixins.media(630px) {
+  .product__title {
+    font-size: 79px;
+  }
+}
+
 @include mixins.media(575px) {
   .product {
     padding: 205px 22px 120px;
     align-items: center;
+
+    &__title {
+      font-size: 65px;
+      top: 120px;
+    }
 
     &__card {
       flex-direction: column;
@@ -415,5 +435,9 @@
     &__text {
       width: auto;
     }
+  }
+
+  .product__title {
+    font-size: 40px;
   }
 }
