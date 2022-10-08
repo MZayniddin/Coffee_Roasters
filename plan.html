@@ -40,7 +40,23 @@
       </nav>
       <div class="hamburger">
         <img src="./images/hamburger.svg" alt="Hamburger">
+        <img src="./images/close.svg" alt="Hamburger">
       </div>
+    </div>
+    <div class="modal">
+      <nav class="modal-nav">
+        <ul class="modal-nav__list">
+          <li class="modal-nav__item">
+            <a class="modal-nav__link" href="./index.html">Home</a>
+          </li>
+          <li class="modal-nav__item">
+            <a class="modal-nav__link" href="./about.html">About Us</a>
+          </li>
+          <li class="modal-nav__item">
+            <a class="modal-nav__link" href="./plan.html">Create Your Plan</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
   <!-- /Header section -->
@@ -127,7 +143,7 @@
             <h3 id="drink" class="order__option-title">How do you drink your coffee?</h3>
             <div class="order__option-choose">
               <label for="capsule">
-                <input type="radio" id="capsule" name="drink">
+                <input type="radio" value="capsule" id="capsule" name="drink" required>
                 <div class="option__val">
                   <strong class="option__val-title">Capsule</strong>
                   <p class="option__val-copy">
@@ -137,7 +153,7 @@
               </label>
 
               <label for="filter">
-                <input type="radio" id="filter" name="drink">
+                <input type="radio" value="filter" id="filter" name="drink">
                 <div class="option__val">
                   <strong class="option__val-title">Filter</strong>
                   <p class="option__val-copy">
@@ -147,7 +163,7 @@
               </label>
 
               <label for="espresso">
-                <input type="radio" id="espresso" name="drink">
+                <input type="radio" value="espresso" id="espresso" name="drink">
                 <div class="option__val">
                   <strong class="option__val-title">Espresso</strong>
                   <p class="option__val-copy">
@@ -162,7 +178,7 @@
             <h3 id="what-type" class="order__option-title">What type of coffee?</h3>
             <div class="order__option-choose">
               <label for="single">
-                <input type="radio" id="single" name="type">
+                <input type="radio" value="single origin" id="single" name="type" required>
                 <div class="option__val">
                   <strong class="option__val-title">Single Origin</strong>
                   <p class="option__val-copy">
@@ -172,7 +188,7 @@
               </label>
 
               <label for="decaf">
-                <input type="radio" id="decaf" name="type">
+                <input type="radio" value="decaf" id="decaf" name="type">
                 <div class="option__val">
                   <strong class="option__val-title">Decaf</strong>
                   <p class="option__val-copy">
@@ -182,7 +198,7 @@
               </label>
 
               <label for="blended">
-                <input type="radio" id="blended" name="type">
+                <input type="radio" value="blended" id="blended" name="type">
                 <div class="option__val">
                   <strong class="option__val-title">Blended</strong>
                   <p class="option__val-copy">
@@ -197,7 +213,7 @@
             <h3 id="how-much" class="order__option-title">How much would you like?</h3>
             <div class="order__option-choose">
               <label for="250g">
-                <input type="radio" id="250g" name="quantity">
+                <input type="radio" value="250g" id="250g" name="quantity" required>
                 <div class="option__val">
                   <strong class="option__val-title">250g</strong>
                   <p class="option__val-copy">
@@ -207,7 +223,7 @@
               </label>
 
               <label for="500g">
-                <input type="radio" id="500g" name="quantity">
+                <input type="radio" value="500g" id="500g" name="quantity">
                 <div class="option__val">
                   <strong class="option__val-title">500g</strong>
                   <p class="option__val-copy">
@@ -217,7 +233,7 @@
               </label>
 
               <label for="1000g">
-                <input type="radio" id="1000g" name="quantity">
+                <input type="radio" value="1000g" id="1000g" name="quantity">
                 <div class="option__val">
                   <strong class="option__val-title">1000g</strong>
                   <p class="option__val-copy">
@@ -232,7 +248,7 @@
             <h3 id="grind" class="order__option-title">Want us to grind them?</h3>
             <div class="order__option-choose">
               <label for="wholebean">
-                <input type="radio" id="wholebean" name="grind">
+                <input type="radio" value="wholebean" id="wholebean" name="grind" required>
                 <div class="option__val">
                   <strong class="option__val-title">Wholebean</strong>
                   <p class="option__val-copy">
@@ -242,7 +258,7 @@
               </label>
 
               <label for="grind-filter">
-                <input type="radio" id="grind-filter" name="grind">
+                <input type="radio" value="filter" id="grind-filter" name="grind">
                 <div class="option__val">
                   <strong class="option__val-title">Filter</strong>
                   <p class="option__val-copy">
@@ -252,7 +268,7 @@
               </label>
 
               <label for="cafetiére">
-                <input type="radio" id="cafetiére" name="grind">
+                <input type="radio" value="cafetiére" id="cafetiére" name="grind">
                 <div class="option__val">
                   <strong class="option__val-title">Cafetiére</strong>
                   <p class="option__val-copy">
@@ -267,7 +283,7 @@
             <h3 id="deliveries" class="order__option-title">How often should we deliver?</h3>
             <div class="order__option-choose">
               <label for="every_week">
-                <input type="radio" id="every_week" name="deliver">
+                <input type="radio" value="every week" id="every_week" name="deliver" required>
                 <div class="option__val">
                   <strong class="option__val-title">Every week</strong>
                   <p class="option__val-copy">
@@ -277,7 +293,7 @@
               </label>
 
               <label for="every_2_weeks">
-                <input type="radio" id="every_2_weeks" name="deliver">
+                <input type="radio" value="every 2 weeks" id="every_2_weeks" name="deliver">
                 <div class="option__val">
                   <strong class="option__val-title">Every 2 weeks</strong>
                   <p class="option__val-copy">
@@ -287,7 +303,7 @@
               </label>
 
               <label for="every_month">
-                <input type="radio" id="every_month" name="deliver">
+                <input type="radio" value="every month" id="every_month" name="deliver">
                 <div class="option__val">
                   <strong class="option__val-title">Every month</strong>
                   <p class="option__val-copy">
@@ -301,9 +317,9 @@
           <div class="summary">
             <p class="summary-subtitle">Order Summary</p>
             <p class="summary-order">
-              “I drink my coffee as <span>Filter</span>, with a <span>Decaf</span> type of bean. <span>250g</span>
+              “I drink my coffee as <span id="show-drink">Not choosen</span>, with a <span id="show-type">Not choosen</span> type of bean. <span id="show-quantity">Not choosen</span>
               ground
-              ala <span>Cafetiare</span>, sent to me <span>Every Week</span>.”
+              ala <span id="show-grind">Not choosen</span>, sent to me <span id="deliver-time">Not choosen</span>.”
             </p>
           </div>
 
@@ -376,6 +392,8 @@
     </footer>
   </div>
   <!-- /Footer setion -->
+
+  <script src="./js/app.js"></script>
 </body>
 
 </html>

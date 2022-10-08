@@ -1,24 +1,39 @@
 @use '../abstract/mixins';
 
+.header {
+  padding: 45px 0;
+}
+
 .header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 5;
 }
 
-.header__logo img{
+.header__logo img {
   display: block;
-}
-
-.header {
-  padding: 45px 0;
 }
 
 .hamburger {
   display: none;
 
-  img {
+  img:first-child {
     display: block;
+  }
+  img:last-child {
+    display: none;
+  }
+
+  &.active {
+    img:first-child {
+      display: none;
+    }
+
+    img:last-child {
+      display: block;
+    }
   }
 }
 
@@ -32,7 +47,7 @@
   .main-nav {
     display: none;
   }
-  
+
   .hamburger {
     display: inline-block;
   }
@@ -46,5 +61,3 @@
     padding: 33px 0 40px;
   }
 }
-
-
