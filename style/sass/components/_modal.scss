@@ -6,10 +6,9 @@
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 2;
   background: linear-gradient(180deg, rgba(254, 252, 247, 0.504981) 0%, #FEFCF7 55.94%);
   transform: matrix(1, 0, 0, -1, 0, 0);
-  z-index: 1;
-
   &-nav {
     position: absolute;
     bottom: 130px;

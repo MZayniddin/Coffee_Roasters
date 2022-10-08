@@ -6,10 +6,12 @@ const elGrindShow = document.getElementById("show-grind");
 const elDeliverTimeShow = document.getElementById("deliver-time");
 const elHamburger = document.querySelector(".hamburger");
 const elModal = document.querySelector('.modal');
+const elHeader = document.querySelector('.header');
 
 elHamburger.addEventListener("click", () => {
   elHamburger.classList.toggle('active');
   elModal.classList.toggle('active');
+  elHeader.classList.toggle('sticky');
 });
 
 elPlanForm.addEventListener("change", (event) => {
